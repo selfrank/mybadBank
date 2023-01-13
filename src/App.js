@@ -24,7 +24,7 @@ function App() {
           <BalanceContext.Provider value = {{balance:100}}>
           <div className="container" style={{padding: "20px"}}>
             <Switch>
-            <Route path="/home" exact component={Home} />
+            <Route path="/" exact component={Home} />
           <Route exact path="/createaccount/" component={CreateAccount}/>
           <Route exact path="/deposit/" component={Deposit} />
           <Route exact path="/withdraw/" component={Withdraw} />

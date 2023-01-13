@@ -9,7 +9,7 @@
 
 /*code to change background color*/
 .navbar-nav>.active>a {
-    background-color: #DCDCDC;
+    background-color: #0c0338;
     
     
 }
@@ -21,5 +21,5 @@
 	.navbar .nav-item:hover .nav-link{   }
 	.navbar .nav-item:hover .dropdown-menu{ display:block; }
 	.navbar .nav-item .dropdown-menu{ margin-top:0; color:#DCDCDC }
-    .navbar .nav-item .dropdown-menu .dropdown-item {color: grey; font-size: small; font-style:italic;}
+    .navbar .nav-item .dropdown-menu .dropdown-item {color: black;  font-size: small; font-style:italic;}
 }	

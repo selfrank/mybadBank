@@ -30,7 +30,7 @@ console.log ('deposits deposit', deposit)
       secondaryLink="/withdraw/"
       secondaryReference="Withdraw"
       successButton="Deposit More"
-      successMessage="Deposit Success! Account Balance: $"
+      successMessage="Deposit Success!"
       nameLabel="Amount to Deposit"
       balance={totalState}
       isDeposit = {true}

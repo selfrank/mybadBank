@@ -45,13 +45,20 @@ export const Card=(props)=>{
     // }
 console.log('BankForm data',ctx.users);
     function validate(field, label){
+      var passw=  /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d\w\W]{8,}$/;
         if (!field) {
           setStatus('Error: ' + label);
           setTimeout(() => setStatus(''),3000);
           setDisabled (true);
           setTimeout(() => setDisabled(false),3000);
           return false;
-        }
+        }else if  
+        (!(password.match(passw))) {
+          setStatus('Error: password must be 8 characters' );
+          setTimeout(() => setStatus(''),3000);
+        
+        return false;}
+        
         return true;
     }
   
@@ -102,11 +109,11 @@ console.log('BankForm data',ctx.users);
                 </p></>
               ):(
                 <>
-                <h5>{data.successMessage}{name}</h5>
+                <p><h6><b>Success!</b></h6>{data.successMessage}<br/>{name}</p>
                 <button type="submit" className="btn btn-light" onClick={clearForm}>{data.successButton}
                 {/*<a href={data.successButtonLink}></a>*/}
-                </button><br/>
-                <NavLink to={data.secondaryLink} style={{color:"black", paddingLeft: 25, fontStyle: "italic"}}>{data.secondaryReference}</NavLink>
+                </button><br/><br/>
+                <NavLink to={data.secondaryLink} style={{color:"white", fontStyle: "italic"}}>{data.secondaryReference}</NavLink>
                 </>
               )}
       />
@@ -212,16 +219,16 @@ console.log('BankForm data',ctx.users);
                 className="form-control" id="deposit" value={deposit} onChange={handleChange}></input>}
                 <br></br><button type="submit" disabled = {!deposit}  className="btn btn-light" onClick={handle}>{data.header}</button>
                 <button type="in-line" className="btn" style={{btnBorderColor: "transparent"}}> 
-                <a href={data.secondaryLink} style={{color:"black", paddingLeft: 25, fontStyle: "italic"}}>{data.secondaryReference}</a>
+                <NavLink to={data.secondaryLink} style={{color:"white", paddingLeft: 25, fontStyle: "italic"}}>{data.secondaryReference}</NavLink>
                 </button>
                 </p></>
               ):(
                 <>
-                <h5>{data.successMessage}{totalState}</h5>
+                <p>{data.successMessage}<br/> Account Balance: ${totalState}</p>
                 <button type="submit" className="btn btn-light" onClick={clearForm}>{data.successButton}
                 {/*<a href={data.successButtonLink}></a>*/}
                 </button>
-                <NavLink to={data.secondaryLink} style={{color:"black", paddingLeft: 25, fontStyle: "italic"}}>{data.secondaryReference}</NavLink>
+                <NavLink to={data.secondaryLink} style={{color:"white", paddingLeft: 25, fontStyle: "italic"}}>{data.secondaryReference}</NavLink>
                 </>
               )}
       />

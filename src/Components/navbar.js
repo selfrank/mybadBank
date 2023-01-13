@@ -9,12 +9,13 @@ import {NavLink} from 'react-router-dom';
 
 export default function NavBar(location){
   const linkStyle = {
-    backgroundColor: "#DCDCDC"
+    backgroundColor: "#6c757d",
+    color: "white"
   };
 
   const dropDownStyle = {
     backgroundColor: "#DCDCDC",
-    color: "grey"
+    color: "black"
   };
   
  
@@ -22,17 +23,17 @@ export default function NavBar(location){
   return(
     <>
 
-    <nav className="navbar navbar-expand-lg navbar-light" style={{backgroundColor: '#e3f2fd', paddingLeft: 20, }} >
-      <a className="navbar-brand" href="/home">BadBank</a>
+    <nav className="navbar navbar-expand-lg navbar-light" style={{backgroundColor: '#DCDCDC', paddingLeft: 20, }} >
+      
       <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span className="navbar-toggler-icon"></span>
       </button>
       <div className="collapse navbar-collapse" id="navbarNav" >
         <ul className="navbar-nav ml-auto">
           <li className="nav-item">
-          <NavLink className="nav-link dropdown-toggle" activeStyle={linkStyle} to="/home" data-bs-toggle="dropdown">Home</NavLink>
+          <NavLink className="nav-link dropdown-toggle" activeStyle={linkStyle}  exact to="/" data-bs-toggle="dropdown">Home</NavLink>
             <ul className= "dropdown-menu"> 
-            <li><NavLink className="dropdown-item" activeStyle={dropDownStyle} to="/home"> Return to home page</NavLink></li></ul>
+            <li><NavLink className="dropdown-item" activeStyle={dropDownStyle} to="/"> Return to home page</NavLink></li></ul>
           </li>
           <li className="nav-item" >
             <NavLink className="nav-link dropdown-toggle" activeStyle={linkStyle} to="/createaccount/">Create Account</NavLink>

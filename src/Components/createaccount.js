@@ -28,7 +28,7 @@ export default function CreateAccount(){
       secondaryLink="/alldata/"
       secondaryReference="View All"
       successButton="Add another account"
-      successMessage="Success! Account created for "
+      successMessage="Account created for:"
       nameLabel="Name"
 
     />

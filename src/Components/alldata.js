@@ -5,6 +5,7 @@ import React from 'react';
 import {UserContext} from '../App';
 import {BankForm } from './context';
 import {NavLink} from 'react-router-dom';
+import { Container } from 'react-bootstrap';
 //const ctx = React.useContext(UserContext);
 
 const AllData=()=>{
@@ -37,15 +38,16 @@ const AllData=()=>{
  console.log('addData account', accountName)
   return (
     <>
-    <h2 style={{textDecoration: 'underline'}}>All Users</h2><br/>
+    <div style={{backgroundColor: 'white'}}>
+    <h2 style={{paddingBottom:"10px",paddingTop: "10px",color:"#6c757d"}}>All Users</h2>
   
-  <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gridGap: 0, backgroundColor: 'white' }}>
-    <div><h3 style={{backgroundColor: '#e3f2fd',textDecoration: 'underline'}}>Name </h3>{accountName}</div>
-    <div><h3 style={{backgroundColor: '#e3f2fd',textDecoration: 'underline'}}>Email </h3> {accountEmail}</div>
-    <div><h3 style={{backgroundColor: '#e3f2fd',textDecoration: 'underline'}}>Password </h3> {accountPassword}</div>
+  <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gridGap: 0,backgroundColor: '#6c757d', color:"white" }}>
+    <div><h4 style={{color:"white", borderBottom: "solid white"}}>Name </h4>{accountName}</div>
+    <div><h4 style={{color:"white", borderBottom: "solid white"}}>Email </h4> {accountEmail}</div>
+    <div><h4 style={{color:"white", borderBottom: "solid white"}}>Password </h4> {accountPassword}</div>
   </div><br/>
-  <NavLink to="/createaccount/" style={{color:"black", paddingLeft: 25, fontStyle: "italic"}}>Add Additional Users</NavLink>
-    
+  <NavLink to="/createaccount/" style={{color:"#6c757d",  fontStyle: "italic"}}>Add Additional Users</NavLink>
+    </div>
     </> 
   ); 
 };
