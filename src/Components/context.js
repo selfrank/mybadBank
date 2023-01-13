@@ -57,8 +57,7 @@ console.log('BankForm data',ctx.users);
           setStatus('Error: password must be 8 characters' );
           setTimeout(() => setStatus(''),3000);
         
-        return false;}
-        
+        return false;}        
         return true;
     }
   
